@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ayan Web Studio</title>
+
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #f5f7fa;
+}
+
+/* NAVBAR */
+nav {
+    background: #111827;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
+.hero {
+    min-height: 550px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 80px 8%;
+}
+
+.hero h1 {
+    font-size: 52px;
+    max-width: 600px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #666;
+    font-size: 18px;
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+/* WEBSITE PREVIEW */
+.hero-box {
+    width: 350px;
+    height: 230px;
+    background: #f1f3f5;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.screen-top {
+    height: 28px;
+    background: #111827;
+    margin-bottom: 28px;
+    border-radius: 5px;
+}
+
+.screen-line {
+    height: 13px;
+    width: 85%;
+    background: #ccc;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.screen-line.short {
+    width: 60%;
+}
+
+.screen-button {
+    width: 100px;
+    height: 32px;
+    background: #111827;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section > p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* SERVICES / PRICING */
+.services {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 32px;
+    width: 290px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CONTACT */
+/* CONTACT */
+
+.contact {
+    background: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.contact > p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.contact-info {
+    margin: 25px 0;
+}
+
+.contact-info p {
+    margin: 12px 0;
+    color: #444;
+}
+
+.contact .button {
+    margin-top: 10px;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 70px 20px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+    .menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0;
+    }
+}				
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .button {
+    margin-top: 0;
+}
+
+.secondary-button {
+    background: white;
+    color: #111827;
+    border: 2px solid #111827;
+}
+
+.secondary-button:hover {
+    background: #111827;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+}				
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">Ayan Web Studio</div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+</nav>
+
+   <section class="hero">
+
+    <div>
+       <h1>Build Your Website With Ayan Web Studio</h1>
+   <p>
+    We create modern, responsive and professional websites
+    for businesses, personal brands and new projects.
+</p>
+
+        <div class="hero-buttons">
+
+    <a href="#contact" class="button">Get a Website</a>
+
+    <a href="#portfolio" class="button secondary-button">
+        View Our Work
+    </a>
+
+</div>
+    </div>
+
+    <div class="hero-box">
+        <div class="screen-top"></div>
+        <div class="screen-line"></div>
+        <div class="screen-line short"></div>
+        <div class="screen-button"></div>
+    </div>
+
+</section>
+
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Business Website</h3>
+                <p>
+                    A professional website for your business
+                    and customers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Show your skills, projects and work
+                    in one place.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Landing Page</h3>
+                <p>
+                    A simple page designed to promote
+                    a product or service.
+                </p>
+            </div>
+
+        </div>
+    </section>
+<section class="section" id="pricing">
+ <section class="section" id="pricing">
+
+    <h2>Website Packages</h2>
+
+    <p>Choose the package that fits your needs.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Basic</h3>
+
+            <h2>Rs. 5,000</h2>
+
+            <p>Perfect for a simple personal website.</p>
+
+            <p>✓ One Page Website</p>
+            <p>✓ Mobile Responsive</p>
+            <p>✓ Contact Section</p>
+
+            <a href="#contact" class="button">Choose Basic</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Business</h3>
+
+            <h2>Rs. 10,000</h2>
+
+            <p>Professional website for small businesses.</p>
+
+            <p>✓ Up to 5 Pages</p>
+            <p>✓ Mobile Responsive</p>
+            <p>✓ WhatsApp Contact</p>
+
+            <a href="#contact" class="button">Choose Business</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Premium</h3>
+
+            <h2>Rs. 15,000</h2>
+
+            <p>Complete website for growing businesses.</p>
+
+            <p>✓ Multiple Pages</p>
+            <p>✓ Modern Design</p>
+            <p>✓ WhatsApp + Contact</p>
+
+            <a href="#contact" class="button">Choose Premium</a>
+        </div>
+
+    </div>
+
+</section>
+        </div>
+
+    </div>
+</section>
+    <section class="section" id="about">
+<section class="section" id="portfolio">
+
+    <h2>Our Recent Work</h2>
+
+    <p>Some examples of websites we can create.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Business Website</h3>
+            <p>
+                Modern website for a local business
+                with services and contact information.
+            </p>
+            <a href="#" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>
+                Clean portfolio website to showcase
+                skills, projects and experience.
+            </p>
+            <a href="#" class="button">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Product Landing Page</h3>
+            <p>
+                Attractive landing page for promoting
+                a product or online service.
+            </p>
+            <a href="#" class="button">View Project</a>
+        </div>
+
+    </div>
+
+</section>
+<section class="section" id="about">
+        <h2>About Us</h2>
+
+        <p>
+            We create simple and modern websites
+            that are easy to use and understand.
+        </p>
+    </section>
+
+    <section class="section contact" id="contact">
+       <section class="section contact" id="contact">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+        Have a project in mind? Contact us and let's build
+        your website together.
+    </p>
+
+    <div class="contact-info">
+
+        <p><strong>📱 Phone:</strong> 03004695510</p>
+
+        <p><strong>📧 Email:</strong> ayanwebstudio@gmail.com</p>
+
+    </div>
+
+    <a href="https://wa.me/923004695510" 
+       class="button" 
+       target="_blank">
+        WhatsApp Us
+    </a>
+
+</section>
+    </section>
+
+    <footer>
+        © 2026 Ayan Web Studio
+    </footer>
+<script>
+    console.log("Welcome to Ayan Web Studio!");
+
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(function(link) {
+
+        link.addEventListener("click", function(event) {
+
+            const href = link.getAttribute("href");
+
+            // Home button
+            if (href === "#") {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+                return;
+            }
+
+            // Other navigation links
+            const target = document.querySelector(href);
+
+            if (target) {
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+    }
+</script>
+</body>
+</html>
